@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/default.css">
+    <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Youtalk</title>
+</head>
+<body class="container">
+    <header class="header">
+        <div class="header__logo">
+            <a href="/index.html"><img src="./img/logo.svg" alt="logotip"></a>
+        </div>
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="menu__list-item item"><a href="#" class="item__link">О нас</a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link">Тарифы</a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link">Для бизнеса</a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link">Психологам</a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link">Сертификат</a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link item__link-dropdown">Материалы <img src="/img/icon_menu.png" alt="Стрелочка вниз"></a></li>
+                <li class="menu__list-item item"><a href="#" class="item__link">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="header__action">
+            <button class="header__action-btn">
+                Подобрать психолога
+            </button>
+        </div>
+    </header>
+    <div class="header__line"></div>
+    <main class="hero">
+        <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <a href="/" class="breadcrumb__link">Главная</a>
+            <span>&gt;</span>
+            <span>Блог</span>
+        </nav>
+        <section class="blog">
+            <h1 class="blog__title">Блог</h1>
+            <div class="blog__filter">
+                <div class="blog__filter-selection"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" fill="none"><defs><pattern id="b" width="1" height="1" patternContentUnits="objectBoundingBox"><use xlink:href="#a" transform="rotate(.721) scale(.01389)"/></pattern><image xlink:href="data:image/png;base64,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" id="a" width="72" height="72"/></defs><path fill="none" d="M0 0h20v20H0z"/><path fill="url(#b)" d="M1 1h18v18H1z"/></svg>Все</div>
+                <div class="blog__filter-selection"> Самооценка и самопринятие</div>
+                <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/><defs><pattern id="pattern0_4492_2204" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_4492_2204" transform="scale(0.0138889)"/></pattern><image id="image0_4492_2204" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/></defs></svg> Self</div>
+                <div class="blog__filter-selection">Чувства и эмоции</div> 
+                <div class="blog__filter-selection">Тревога</div>
+                <div class="blog__filter-selection">Упражнения</div>
+                <div class="blog__filter-selection">Психология питания</div>
+                <div class="blog__filter-selection">Насилие</div>
+                <div class="blog__filter-selection">Личное здоровье</div>
+            </div>
+        </section>
+        <div class="article__bg"></div>
+        <section class="article__grid">
+            <div class="article__grid-container">
+            <div class="article__grid-big">
+                <div class="article__grid-img backgroud__img1"> 
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Самооценка и самопринятие</div> <!--Обернуть в отдельный div?-->
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div>
+                    </div>
+                </div>
+                <div class="big-info">
+                <h2 class="article__grid-title">Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</h2>
+                <span class="article__grid-copy">Автор: Лиза Файнтух</span>
+                <p class="article__grid-text">Изначально термин «эмоциональное профессиональной сфере и относился...</p>
+                <span class="article__grid-date">21.08.2021</span> <!-- margin: auto вытащить из блока инфо -->
+                </div>
+            </div>   
+            <div class="article__grid-big">
+                <a href="/pages/page1.html">
+                <div class="article__grid-img backgroud__img2">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection articale__filter2"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div>    
+                    </div>
+                </div>
+                <div class="big-info">
+                <h2 class="article__grid-title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                <span class="article__grid-copy">Автор: Екатерина Бельтюкова</span>
+                <p class="article__grid-text">Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться...</p>
+                <span class="article__grid-date">11.08.2021</span>
+                </div></a>
+            </div>
+            <div class="article__grid-item">
+                <div class="article__grid-img backgroud__img3">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Самооценка и самопринятие</div>
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Психология питания</div>
+                    </div>
+                </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</h2>
+                <span class="article__grid-copy">Автор: Лиза Файнтух</span>
+                <p class="article__grid-text">Изначально термин «эмоциональное профессиональной сфере и относился...</p>
+                <span class="article__grid-date">21.08.2021</span>
+                </div>
+            </div>
+            <div class="article__grid-item">
+                <div class="article__grid-img backgroud__img4">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div></div>
+                    </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                <span class="article__grid-copy">Автор: Екатерина Бельтюкова</span>
+                <p class="article__grid-text">Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться...</p>
+                <span class="article__grid-date">11.08.2021</span>
+                </div>
+            </div>
+            <div class="article__grid-item phone__adaptiv">
+                <div class="article__grid-img backgroud__img5">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div></div>
+                    </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Как управлять своими эмоциями: 8 шагов</h2>
+                <span class="article__grid-copy">Автор: Екатерина Бельтюкова</span>
+                <p class="article__grid-text ">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</p>
+                <span class="article__grid-date">07.08.2021</span>
+                </div>
+            </div>
+            <div class="article__grid-item phone__adaptiv">
+                <div class="article__grid-img backgroud__img6">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div></div>
+                        </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</h2>
+                <span class="article__grid-copy">Автор: Лиза Файнтух под редакцией Екатерины Бельтюковой</span>
+                <p class="article__grid-text">Изначально термин «эмоциональное я...</p>
+                <span class="article__grid-date">21.08.2021</span>
+                </div>
+            </div>
+            <div class="article__grid-item phone__adaptiv">
+                <div class="article__grid-img backgroud__img7">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div></div>
+                    </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                <span class="article__grid-copy">Автор: Екатерина Бельтюкова</span>
+                <p class="article__grid-text">Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться...</p>
+                <span class="article__grid-date">11.08.2021</span>
+                </div>
+            </div>
+            <div class="article__grid-item phone__adaptiv">
+                <div class="article__grid-img backgroud__img8">
+                    <div class="article__filter">
+                        <div class="blog__filter-selection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="1" y="1" width="20" height="20" fill="url(#pattern0_4492_2204)"/></svg> Self</div></div>
+                    </div>
+                <div class="small-info">
+                <h2 class="article__grid-title">Как управлять своими эмоциями: 8 шагов</h2>
+                <span class="article__grid-copy">Автор: Екатерина Бельтюкова</span>
+                <p class="article__grid-text">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</p>
+                <span class="article__grid-date">07.08.2021</span>
+                </div>
+            </div>
+            </div>
+            <div class="article__grid-button">
+            <button class="article__btn">Еще</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">О нас</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Блог</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Тарифы</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Вебинары</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Для бизнеса</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Подкасты</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Психологам</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Сертификат</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">FAQ</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__item-link">Контакты</a></li>
+                </ul>
+            </div>
+        <div class="footer__subscrible">
+            <h2 class="footer__subscrible-title">Одно письмо в неделю со свежими новостями и акциями</h2>
+            <div class="footer__subscrible-action">
+            <input class="footer__subscrible-input" type="email" placeholder="Ваш e-mail">
+            <button class="footer__subscrible-btn"><img src="/img/footer-icon-btn.png" alt="стрелочка вправо"></button>
+            </div>
+            <span class="footer__subscrible-text">Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности</span>
+        </div>
+        <div class="footer__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="221" height="50" fill="none"><path fill="none" d="M0 0h221v50H0z"/><g fill="#FFF"><path d="M83.23 23.751c3.037-4.488 3.9-8.367 2.509-9.758-.437-.427-1.097-.65-1.96-.65-1.899 0-4.701 1.066-7.798 3.158 1.29.995 2.579 2.122 3.848 3.391a38.705 38.705 0 0 1 3.392 3.849l.01.01ZM69.646 19.902a38.684 38.684 0 0 1 3.849-3.392c-3.098-2.091-5.9-3.158-7.8-3.158-.852 0-1.522.214-1.959.65-1.391 1.392-.528 5.26 2.508 9.759a41.507 41.507 0 0 1 3.392-3.849l.01-.01ZM82.335 25a37.757 37.757 0 0 0-3.533-4.062 37.766 37.766 0 0 0-4.062-3.534 37.767 37.767 0 0 0-4.062 3.534A37.78 37.78 0 0 0 67.144 25a37.789 37.789 0 0 0 3.534 4.061 37.767 37.767 0 0 0 4.062 3.534 37.766 37.766 0 0 0 4.062-3.534A37.766 37.766 0 0 0 82.335 25ZM66.256 26.249c-3.036 4.488-3.9 8.367-2.508 9.758 1.391 1.392 5.26.528 9.758-2.518a41.492 41.492 0 0 1-3.848-3.391 38.707 38.707 0 0 1-3.392-3.849h-.01Z"/><path d="M52.027 0H12.242C5.337 0-.258 5.595-.258 12.5v25c0 6.905 5.595 12.5 12.5 12.5h75c6.905 0 12.5-5.595 12.5-12.5V0H52.027Zm-2.285 48.538h-37.5c-6.082 0-11.038-4.955-11.038-11.038v-25c0-6.082 4.956-11.038 11.038-11.038h37.5v47.076Zm37.033-11.505c-.72.72-1.757 1.066-2.985 1.066-2.427 0-5.666-1.33-9.048-3.706-3.381 2.376-6.62 3.706-9.047 3.706-1.24 0-2.265-.345-2.986-1.066-2.142-2.143-.954-6.925 2.63-12.033-3.584-5.108-4.772-9.89-2.63-12.033 2.143-2.143 6.926-.954 12.033 2.63 5.108-3.584 9.89-4.772 12.033-2.63 2.143 2.143.955 6.925-2.63 12.033 3.585 5.108 4.773 9.89 2.63 12.033Z"/><path d="M79.84 30.098a38.707 38.707 0 0 1-3.848 3.391c4.488 3.036 8.367 3.9 9.758 2.518 1.392-1.39.528-5.26-2.508-9.758a41.477 41.477 0 0 1-3.391 3.849h-.01ZM10.293 15.211c-1.34 1.676-1.94 3.96-1.524 5.819 1.077 4.813 5.545 5.585 8.825 6.011 2.589.335 5.067.812 5.006 3.117-.071 2.397-2.773 2.986-4.55 2.986-4.62 0-4.772-3.412-4.772-3.412H8.312c.072 1.28.457 3.34 2.042 5.108 1.726 1.94 4.325 2.914 7.707 2.914 2.6 0 4.965-.843 6.65-2.346v2.062h4.631v-5.9l1.635-1.797 4.681 7.697h5.392l-6.813-11.262 6.813-7.463H35.05L29.342 25V12.5h-4.63v3.026a12.29 12.29 0 0 0-.488-.579c-1.685-1.787-4.112-2.69-7.22-2.69-3.584 0-5.625 1.604-6.711 2.954Zm6.793 1.381c2.082 0 4.163.467 4.955 3.361h2.66v4.428c-3.32-2.732-10.53-1.016-11.301-4.418-.406-1.787 1.37-3.37 3.686-3.37Z"/></g><g fill="#FFF"><path d="M111.538 34.342c.314.102.67.152 1.086.152.518 0 .934-.152 1.249-.467.315-.315.518-.73.62-1.188l-6.591-13.952h4.387l4.224 10.012 3.707-10.012h4.173l-5.94 13.75c-.782 1.817-1.584 3.167-2.468 4.02-.883.884-1.838 1.32-2.904 1.32-.365 0-.65 0-.883-.05a4.05 4.05 0 0 1-.65-.132l-.498-.153c-.132-.05-.264-.101-.386-.132v-3.523c.234.152.518.284.853.365l.021-.01ZM131.543 32.27c-.264.082-.548.133-.853.204-.315.05-.65.101-.985.132-.335.05-.67.05-.985.05-.802 0-1.482-.08-2.102-.203-.599-.152-1.117-.365-1.533-.67a2.83 2.83 0 0 1-.934-1.249c-.203-.497-.315-1.117-.315-1.838v-4.975h3.574v4.275c0 .386.051.73.153.954.081.264.233.467.436.62.203.152.437.264.752.314.314.051.67.082 1.086.082.62 0 1.087-.051 1.452-.153.366-.132.65-.264.853-.386v-5.706h3.575v13.8h-3.575v-5.443c-.152.05-.365.132-.619.203l.02-.01ZM149.588 35.794c.031.265.102.498.183.62.081.183.152.284.264.365a.614.614 0 0 0 .315.153v.569h-3.97l-.204-.65c-.101-.264-.132-.57-.132-.965l-.802.802a5.663 5.663 0 0 1-.903.62 4.436 4.436 0 0 1-1.138.436 6.927 6.927 0 0 1-1.553.153 5.285 5.285 0 0 1-1.716-.264 4.294 4.294 0 0 1-1.351-.803 3.844 3.844 0 0 1-.883-1.35c-.203-.518-.315-1.137-.315-1.838 0-.569.081-1.087.264-1.584.183-.498.436-.904.751-1.27.335-.365.731-.67 1.188-.903.467-.264.985-.417 1.584-.498l3.504-.518c.132-.03.264-.03.416-.081a.953.953 0 0 0 .416-.183.932.932 0 0 0 .315-.314 1.18 1.18 0 0 0 .132-.57c0-.233-.051-.436-.101-.619a1.213 1.213 0 0 0-.366-.497 1.606 1.606 0 0 0-.67-.335c-.285-.081-.65-.102-1.066-.102-.498 0-.853.051-1.138.132a1.755 1.755 0 0 0-.7.416 1.55 1.55 0 0 0-.386.6l-.153.751h-3.574c0-.152.031-.386.081-.7a4.39 4.39 0 0 1 .315-.986c.132-.335.366-.7.62-1.066.264-.365.599-.7 1.066-1.015a5.723 5.723 0 0 1 1.584-.731c.619-.183 1.35-.285 2.234-.315 1.218 0 2.234.132 3.005.365.752.265 1.351.6 1.788.985.416.417.7.853.853 1.351.132.498.203.985.203 1.483v7.31c0 .417.03.752.081 1.016l-.041.03Zm-4.305-4.721a3.687 3.687 0 0 1-.884.264l-.954.183c-.416.08-.782.152-1.087.264a2.81 2.81 0 0 0-.781.385 1.815 1.815 0 0 0-.468.62c-.101.233-.152.518-.152.883 0 .285.051.549.132.752a1.5 1.5 0 0 0 .416.548c.153.132.336.264.549.315.233.081.467.101.731.101.132 0 .315-.03.518-.05.203-.03.416-.082.67-.153.234-.101.467-.203.701-.365.233-.132.436-.335.619-.569.203-.233.366-.518.467-.883a4.04 4.04 0 0 0 .183-1.188v-1.402a3.487 3.487 0 0 1-.65.315l-.01-.02ZM159.599 27.63a2.01 2.01 0 0 0-.436-.7 1.95 1.95 0 0 0-.701-.437 3.68 3.68 0 0 0-1.016-.132c-.599 0-1.066.132-1.421.416-.366.284-.65.62-.833 1.036-.203.436-.315.903-.386 1.4-.05.498-.101.955-.101 1.402 0 .447.03.934.081 1.422.051.518.152.954.366 1.37.182.417.436.783.832 1.036.366.285.853.417 1.483.417.416 0 .782-.081 1.086-.264.285-.153.549-.366.752-.6.203-.263.365-.517.467-.802.081-.264.132-.517.132-.751h3.737c0 .234-.031.518-.102.883a7.753 7.753 0 0 1-.416 1.168 8.46 8.46 0 0 1-.731 1.219 4.972 4.972 0 0 1-1.168 1.086c-.467.335-.985.6-1.605.802-.619.203-1.35.315-2.152.315-1.036 0-1.97-.152-2.772-.467-.803-.335-1.483-.802-2.021-1.421-.548-.62-.965-1.371-1.249-2.306-.284-.903-.437-1.95-.437-3.107 0-1.157.153-2.234.467-3.137.315-.884.752-1.656 1.32-2.285a5.438 5.438 0 0 1 2.052-1.402c.782-.335 1.685-.497 2.65-.497.416 0 .853.05 1.32.101.437.051.883.183 1.32.336.437.182.853.385 1.269.65.386.264.752.599 1.087.984.315.386.568.853.782 1.371.203.518.335 1.138.386 1.838h-3.737c-.081-.365-.153-.7-.285-.954l-.02.01ZM176.109 23.71v2.905h-4.174V37.51h-3.574V26.615h-4.173V23.71h11.931-.01ZM186.061 28.696v-4.975h3.574v13.8h-3.574v-5.91h-5.26v5.91h-3.574v-13.8h3.574v4.975h5.26ZM195.664 32.22l5.037-8.51h3.757v13.8h-3.575v-8.326h-.05l-4.874 8.326h-3.92v-13.8h3.574v8.51h.051ZM215.651 23.71h4.772l-5.706 5.727 5.94 8.063h-4.671l-4.042-5.839-1.452 1.483V37.5h-3.574V23.7h3.574v5.24l5.159-5.24v.01Z"/></g></svg>
+            <div class="footer__icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><defs><clipPath id="a"><path fill="#FFF" d="M6 10h20v12H6z"/></clipPath></defs><path d="M0 0h32v32H0z"/><rect width="32" height="32" fill="#EFF5FB" rx="16"/><g clip-path="url(#a)"><path d="M6 10h20v12H6z"/><path fill="#333" d="M25.822 20.541c-.054-.093-.386-.841-1.987-2.38-1.675-1.61-1.45-1.349.568-4.133 1.229-1.696 1.72-2.732 1.566-3.175-.146-.422-1.05-.31-1.05-.31l-3.005.018s-.223-.031-.389.07c-.161.102-.265.335-.265.335s-.476 1.313-1.111 2.429c-1.339 2.355-1.875 2.479-2.094 2.333-.509-.34-.381-1.37-.381-2.1 0-2.283.333-3.234-.652-3.48-.327-.082-.567-.136-1.403-.145-1.073-.012-1.982.004-2.496.264-.342.173-.606.56-.445.582.199.028.65.126.888.463.309.433.297 1.41.297 1.41s.178 2.686-.413 3.02c-.407.229-.963-.238-2.157-2.376-.611-1.094-1.074-2.304-1.074-2.304s-.088-.226-.247-.346a1.222 1.222 0 0 0-.463-.193l-2.857.018s-.43.013-.587.206c-.14.172-.011.527-.011.527s2.238 5.42 4.77 8.154c2.324 2.505 4.962 2.34 4.962 2.34h1.195s.361-.041.545-.247c.17-.189.164-.544.164-.544s-.024-1.66.721-1.905c.734-.241 1.677 1.605 2.675 2.316.755.537 1.33.42 1.33.42l2.67-.04s1.398-.089.736-1.227Z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><defs><clipPath id="a"><path fill="#FFF" d="M8 9h16v14H8z"/></clipPath></defs><path d="M0 0h32v32H0z"/><rect width="32" height="32" fill="#EFF5FB" rx="16"/><g clip-path="url(#a)"><path d="M8 9h16v14H8z"/><path fill="#333" d="m8.283 15.77 3.686 1.394 1.427 4.65c.092.299.451.409.69.21l2.055-1.697a.607.607 0 0 1 .747-.021l3.707 2.727a.433.433 0 0 0 .68-.266L23.991 9.53a.437.437 0 0 0-.582-.5l-15.13 5.914a.443.443 0 0 0 .004.824Zm4.883.652 7.206-4.498c.13-.08.262.097.151.202l-5.946 5.601a1.255 1.255 0 0 0-.382.748l-.203 1.521c-.027.203-.308.223-.364.027l-.779-2.774a.74.74 0 0 1 .317-.827Z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><defs><clipPath id="a"><path fill="#FFF" d="M7 7h18v18H7z"/></clipPath></defs><path d="M0 0h32v32H0z"/><rect width="32" height="32" fill="#EFF5FB" rx="16"/><g clip-path="url(#a)"><path d="M7 7h18v18H7z"/><path d="M6 6h20v20H6V6Z"/><path fill="#333" d="M24.47 10.713a6.987 6.987 0 0 1-2.002.549 3.497 3.497 0 0 0 1.534-1.929 6.966 6.966 0 0 1-2.213.846 3.485 3.485 0 0 0-5.939 3.178 9.894 9.894 0 0 1-7.183-3.641 3.485 3.485 0 0 0 1.078 4.653 3.473 3.473 0 0 1-1.578-.436v.044a3.488 3.488 0 0 0 2.796 3.417c-.514.14-1.053.16-1.575.06a3.487 3.487 0 0 0 3.255 2.42 6.994 6.994 0 0 1-5.159 1.444 9.858 9.858 0 0 0 5.342 1.567c6.41 0 9.917-5.31 9.917-9.917 0-.15-.005-.301-.011-.45a7.08 7.08 0 0 0 1.739-1.804Z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="none" d="M0 0h32v32H0z"/><path fill="#333" d="M0 16C0 7.163 7.163 0 16 0s16 7.163 16 16-7.163 16-16 16S0 24.837 0 16Z"/><path fill="#FFF" fill-rule="evenodd" d="M15.676 0c-.075 6.583-.506 10.266-2.958 12.718S6.583 15.601 0 15.676v.955c6.583.076 10.266.506 12.718 2.958 2.414 2.414 2.869 6.02 2.954 12.411h.963c.086-6.39.54-9.997 2.954-12.41 2.414-2.414 6.02-2.869 12.411-2.955v-.963c-6.39-.085-9.997-.54-12.41-2.954C17.136 10.266 16.706 6.583 16.63 0h-.955Z"/></svg>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="footer__box">
+        <div class="footer__info">
+        <span class="footer__info-item">©Youtalk, 2018 – 2022</span>
+        <span class="footer__info-item">Юридические документы</span>
+        <span class="footer__info-item">Способы оплаты</span>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
