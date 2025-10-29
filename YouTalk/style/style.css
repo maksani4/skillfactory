@@ -59,13 +59,24 @@
     max-width: 230px;
     max-height: 48px;
     border-radius: 4px;
-    background: rgba(227, 245, 245, 1);
     font-size: 16px;
     font-weight: 700;
     line-height: 100%;
     text-align: center;
-    color: rgba(3, 178, 165, 1);
     cursor: pointer;
+}
+
+.btn-animation {
+    color: rgba(3, 178, 165, 1);
+    background: rgba(227, 245, 245, 1);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0.3s;
+}
+
+.btn-animation:hover {
+    background: rgba(130, 245, 245, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .header__line {
