@@ -1,0 +1,208 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.questions {
+  position: relative;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 57px;
+  overflow: hidden;
+}
+
+.questions__top {
+  position: relative;
+  height: 400px;
+  background-color: $color-white;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.questions__top-left {
+  width: 50%;
+  background-image: url(../image/questions-l-bg.png);
+  background-repeat: no-repeat;
+  background-position: left 98%;
+  background-size: cover;
+  height: 100%;
+}
+
+.questions__top-right {
+  width: 50%;
+  background-image: url(../image/questions-r-bg.png);
+  background-repeat: no-repeat;
+  background-position: right 98%;
+  background-size: cover;
+  height: 100%;
+}
+
+.questions__container {
+  max-width: $container-max-width-small;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  position: relative;
+  z-index: 1;
+}
+
+.questions__form-wrapper {
+  background-color: $color-dark;
+  max-width: 880px;
+  margin: -250px auto 0;
+  padding: 40px 70px 50px;
+  position: relative;
+  border-radius: 2px;
+}
+
+.questions__title {
+  @include text-base($font-secondary, $font-size-xl);
+  color: $color-white;
+  text-align: center;
+  margin: 0 0 45px;
+  text-transform: uppercase;
+  line-height: 138%;
+}
+
+.questions__form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.questions__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 58px;
+}
+
+.questions__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  &--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.questions__form-label {
+  @include text-base($font-primary, $font-size-sm);
+  color: $color-white-transparent-50;
+}
+
+.questions__form-input {
+  @include input-base($color-white-transparent-30, $color-white);
+  padding-bottom: 5px;
+  
+  &::placeholder {
+    color: $color-white-transparent-50;
+  }
+}
+
+.questions__form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -20px;
+}
+
+.questions__form-checkbox-input {
+  @include checkbox-base($color-white-transparent-50);
+  
+  &:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.questions__form-checkbox-label {
+  @include text-base($font-primary, $font-size-base);
+  color: $color-white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.questions__form-button {
+  padding: 20px 22px;
+  height: $button-height-large;
+  @include button-base();
+  line-height: 100%;
+  box-shadow: 0 5px 15px $color-primary-light-shadow;
+  margin-top: -20px;
+  align-self: center;
+  width: 200px;
+}
+
+.questions__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 40px
+}
+
+.questions__contacts-text {
+  @include text-base($font-secondary, $font-size-xl);
+  color: $color-primary;
+  text-align: center;
+  line-height: 140%;
+  margin: 0;
+}
+
+.questions__social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.questions__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  transition: transform $transition-base;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.questions__image {
+  position: absolute;
+  top: calc(150px + 40px + 45px + 50px + 60px + 50px + 5px);
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black-overlay;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.questions__map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: $z-index-content; 
+}

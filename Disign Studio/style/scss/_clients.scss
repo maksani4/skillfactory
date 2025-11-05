@@ -1,0 +1,121 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.clients {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.clients__container {
+    max-width: 1230px;
+    margin: auto;
+}
+
+.clients__title {
+    @include heading($font-size-xxxl, $color-dark);
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-divider {
+    margin-bottom: 25px;
+}
+
+.clients__description {
+    @include text-base($font-primary, $font-size-xl);
+    color: $color-text-dark;
+    line-height: 120%;
+    margin-bottom: 40px;
+    max-width: 400px;
+    text-align: center;
+    margin: auto auto 40px auto;
+}
+
+.clients__cards {
+    display: flex;
+    gap: 55px;
+}
+
+.clients__card {
+    background-color: $color-white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
+    position: relative;
+}
+
+.clients__card-avatar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 260px;
+    margin-bottom: 25px;
+
+    h3 {
+        @include text-base($font-secondary, $font-size-xl);
+        color: $color-dark;
+        line-height: 110%;
+        margin: 0;
+    }
+}
+
+.clients__card-text {
+    @include text-base($font-primary, $font-size-sm);
+    color: $color-text-dark-149;
+    line-height: 180%;
+    margin-bottom: 35px;
+}
+
+.clients__card-data {
+    background-color: $color-primary;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    max-width: 270px;
+    position: absolute;
+    left: 0;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $color-white;
+        transform: translateX(-50%);
+    }
+}
+
+.clients__card-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    
+    &:first-child {
+        padding-right: 10px;
+    }
+    
+    &:last-child {
+        padding-left: 10px;
+    }
+    
+    img {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+}
+
+.clients__card-stat-value {
+    @include text-base($font-secondary, $font-size-lg);
+    color: $color-white;
+    line-height: 120%;
+    margin: 0;
+    white-space: nowrap;
+}

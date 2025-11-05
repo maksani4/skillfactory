@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.form {
+  max-width: 680px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.form__title {
+  @include text-base($font-primary, $font-size-xl);
+  color: $color-text-dark;
+  line-height: 200%;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.form__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 58px;
+  align-items: end;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__label {
+  @include text-base($font-primary, $font-size-sm);
+  color: $color-text-dark-transparent;
+  line-height: 100%;
+}
+
+.form__input {
+  @include input-base();
+  height: 20px;
+  padding-bottom: 8px;
+}
+
+.form__button {
+  width: 100%;
+  height: $button-height-large;
+  @include button-base();
+  line-height: 100%;
+  box-shadow: 0 5px 15px 0px $color-primary-light-shadow;
+}
+
+.form__checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.form__checkbox-input {
+  @include checkbox-base();
+}
+
+.form__checkbox-label {
+  @include text-base($font-primary, $font-size-base);
+  color: $color-text-dark;
+  cursor: pointer;
+  user-select: none;
+  line-height: 100%;
+}

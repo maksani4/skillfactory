@@ -1,0 +1,98 @@
+@use 'variables' as *;
+
+// Миксин для текста с общими стилями
+@mixin text-base($font-family: $font-primary, $font-size: $font-size-base, $font-weight: 400) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+// Миксин для заголовка
+@mixin heading($font-size: $font-size-xxxl, $color: $color-primary) {
+  @include text-base($font-secondary, $font-size);
+  color: $color;
+  text-transform: uppercase;
+}
+
+// Миксин для кнопки
+@mixin button-base($background: $color-primary, $color: $color-white) {
+  @include text-base($font-primary, $font-size-xs, 400);
+  background-color: $background;
+  border: none;
+  border-radius: 2px;
+  color: $color;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color $transition-base, transform $transition-base;
+  
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+// Миксин для контейнера
+@mixin container($max-width: $container-max-width, $padding: $container-padding) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $padding;
+  width: 100%;
+}
+
+// Миксин для input
+@mixin input-base($border-color: $color-text-dark-transparent-15, $text-color: $color-text-dark) {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  background-color: transparent;
+  color: $text-color;
+  @include text-base($font-primary, $font-size-base);
+  outline: none;
+  transition: border-color $transition-base;
+  
+  &::placeholder {
+    color: $color-text-dark-transparent;
+    @include text-base($font-primary, $font-size-base);
+  }
+  
+  &:focus {
+    border-bottom-color: $color-primary;
+  }
+}
+
+// Миксин для чекбокса
+@mixin checkbox-base($border-color: $color-primary) {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color $transition-base;
+  
+  &:checked {
+    background-color: $color-primary;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 4px;
+      height: 8px;
+      border: solid $color-white;
+      border-width: 0 2px 2px 0;
+    }
+  }
+}
+
+// Миксин для разделителя секций
+@mixin section-divider-line {
+  width: 32px;
+  height: 2px;
+  background-color: $color-primary;
+  border-radius: 1px;
+}

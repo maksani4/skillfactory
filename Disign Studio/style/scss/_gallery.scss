@@ -1,0 +1,95 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.gallery {
+  max-width: 1230px;
+  margin: auto;
+}
+
+.gallery__title {
+  @include heading($font-size-xxl, $color-text-dark-24);
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.gallery__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.gallery__card {
+  position: relative;
+  min-height: 618px;
+}
+
+.gallery__card-image {
+  width: 390px;
+  height: auto;
+  display: block;
+}
+
+.gallery__card-content {
+  position: absolute;
+  top: 290px;
+  left: 30px;
+  width: 330px;
+  background-color: $color-white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-base, box-shadow $transition-base;
+  padding-bottom: 45px;
+}
+
+.gallery__card:hover .gallery__card-content {
+  transform: translateY(-10px);
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery__card-title {
+  @include heading($font-size-xl, $color-primary);
+  line-height: 130%;
+  padding: 25px 35px 0 35px;
+  margin-bottom: 15px;
+}
+
+.gallery__card-list {
+  list-style: none;
+  padding: 0 35px;
+  margin-bottom: 0;
+}
+
+.gallery__card-item {
+  @include text-base($font-primary, $font-size-sm);
+  color: $color-text-dark;
+  line-height: 210%;
+  padding-left: 17px;
+  position: relative;
+  
+  &::before {
+    content: "•";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    color: $color-primary;
+    font-size: 16px;
+    line-height: 210%;
+  }
+}
+
+.gallery__card-price {
+  position: absolute;
+  bottom: -27.5px;
+  left: 0;
+  width: 230px;
+  height: 55px;
+  background-color: $color-primary;
+  color: $color-white;
+  @include text-base($font-secondary, $font-size-lg);
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 5px 5px 10px $color-primary-light-shadow;
+}
